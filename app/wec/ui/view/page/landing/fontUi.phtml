@@ -1,0 +1,75 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'font',
+    'selectedMenu' => 'font',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <div class="mains-item-font">
+        <h1>字体使用规范   font</h1>
+        <div class="flex flex-main">
+            <div class="col-xs-12 col-md-4 col-lg-4 space m-b-xs">
+                <h2 class="bg-gray m-t-md">设定标题主次层次（中文、英文、数字）</h2>
+                <h1>h1 一级标题：苹果标题/Rem/1.5</h1>
+                <h2>h2 二级标题：苹果标题/Rem/1.0</h2>
+                <h3>h3 三级标题：苹果标题/Rem/0.875</h3>
+                <h4>h4 四级标题：苹果标题/Rem/0.75</h4>
+                <h5>h5 五级标题：苹果标题/Rem/.7</h5>
+            </div>
+
+            <div class="col-xs-12 col-md-6 col-lg-6 space m-b-xs">
+                <h2 class="bg-gray m-t-md">字体使用规范 fonts</h2>
+                <b>设定字体主次层次（中文、英文、数字）</b>
+                <div class="font-xlarge">xlarge/font-xlarge 一级内容：苹果字体/Rem/1.5(24px)</div>
+                <div class="font-large">large/font-large 二级内容：苹果字体/Rem/1.25(20px)</div>
+                <div class="font-normal">normal/font-normal 三级内容：苹果字体/Rem/1.0(16px)</div>
+                <div class="font-medium">medium/font-medium 四级内容：苹果字体/Rem/0.875(14px)</div>
+                <div class="font-small">small/font-small 五级内容：苹果字体/Rem/0.75(12px)</div>
+            </div>
+
+            <div class="col-xs-12 col-md-2 col-lg-2 m-b-xs">
+                <h2 class="bg-gray m-t-md">字体颜色</h2>
+                <ul class="font-color font-primary-color">
+                    <li>#222222</li>
+                    <li>#666666</li>
+                    <li>#979797</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="flex flex-main using">
+            <ul class="col-xs-12 col-md-5 col-lg-5 space m-b-xs">
+                <h2 class="bg-gray m-t-md">标题使用规范</h2>
+                <li><code class="code">h1</code> 1.5rem(24px)</li>
+                <li><code class="code">h2</code> 1.0rem(16px)</li>
+                <li><code class="code">h3</code> .875rem(14px)</li>
+                <li><code class="code">h4</code> .75rem(12px)</li>
+                <li><code class="code">h5</code> .7rem</li>
+            </ul>
+
+            <ol class="col-xs-12 col-md-7 col-lg-7 m-b-xs">
+                <h2 class="bg-gray m-t-md">字体使用规范</h2>
+                <li><code class="code">.xlarge</code>, <code class="code">.font-xlarge</code> 1.5rem(24px)</li>
+                <li><code class="code">.large</code>, <code class="code">.font-large</code> 1.25rem(20px)</li>
+                <li><code class="code">.normal</code>, <code class="code">.font-normal</code> 1.0rem(16px)</li>
+                <li><code class="code">.medium</code>, <code class="code">.font-medium</code> .875rem(14px)</li>
+                <li><code class="code">.small</code>, <code class="code">.font-small</code> .75rem(12px)</li>
+            </ol>
+        </div>
+
+        <div class="ui-note">
+            注：
+            <div>——文字包括字号，任何字体等涉及只限Banner，自由涉及不限制</div>
+            <div>——产品中的字号应该有一个全局的规划，在同一个界面内，尽量少用太多太接近的字号</div>
+            <div>——h1、h2、h3、h4字体均可加粗</div>
+        </div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

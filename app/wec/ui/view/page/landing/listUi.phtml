@@ -1,0 +1,83 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'list',
+    'selectedMenu' => 'list',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <h1>lists</h1>
+    <h2 class="bg-gray m-t-md">
+        list-item
+        <code class="code">.list</code> > <code class="code">.title</code> + <code class="code">.item</code>
+    </h2>
+    <ul class="list b-d-dark">
+        <li class="title">title</li>
+        <li class="item">
+            <span class="key">name</span>
+            <span class="value">ui-wec-mercury</span>
+        </li>
+        <li class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">
+        list-item striped 
+        <code class="code">.list .striped</code> > <code class="code">.title</code> + <code class="code">.item</code> > <code class="code">.key</code> + <code class="code">.value</code>
+    </h2>
+    <ul class="list striped b-d-dark">
+        <li class="title">title</li>
+        <li class="item">
+            <span class="key">key</span>
+            <span class="value">value</span>
+        </li>
+        <li class="item">
+            <span class="key">name</span>
+            <span class="value">mercury</span>
+        </li>
+        <li class="item">
+            <span class="key">age</span>
+            <span class="value">one</span>
+        </li>
+        <li class="item">
+            <span class="key">locate</span>
+            <span class="value">shanghai</span>
+        </li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">
+        list-item dashed
+        <code class="code">.list .dashed-divider</code> > <code class="code">.title</code> + <code class="code">.item</code>
+    </h2>
+    <ul class="list dashed-divider b-d-dark">
+        <li class="title">title</li>
+        <li class="item">item-1</li>
+        <li class="item">item-2</li>
+        <li class="item">item-3</li>
+        <li class="item">item-4</li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">
+        list-meta 
+        <code class="code">.list</code> > <code class="code">.meta</code>
+    </h2>
+    <div class="list b-d-dark">
+        <span class="meta">span-meta</span>
+        <span class="meta">span-meta</span>
+        <span class="meta">span-meta</span>
+    </div>
+
+    <div class="ui-note">
+        注:
+        <div>- 列表项目初定四种样式, 实际以项目为主</div>
+        <div>- 列表项可以嵌套使用, 嵌套层级不宜过深.</div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

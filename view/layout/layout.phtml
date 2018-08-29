@@ -1,0 +1,64 @@
+<?php
+$vcode = $this->config->str('vcode');
+$localeKey = $this->getLocaleKey();
+$url = $this->routeGet('home');
+
+$pageConfig = $this->pageConfig ? $this->pageConfig : [];
+$pageConfig = array_merge($pageConfig, [
+    'localeKey' => $localeKey,
+    'now' => micro_date()
+]);
+$source = $this->config->str('debug') ? 'dev' : 'dist';
+?><!DOCTYPE html>
+<html lang="<?php echo $localeKey; ?>" prefix="og: http://ogp.me/ns#">
+<head>
+<?php echo $this->insert('html/meta', ['localeKey', $localeKey]); ?>
+<link rel="stylesheet" href="<?php echo $this->staticUrl("css/{$source}/wec-ui-web.css?v=" . $vcode); ?>">
+<?php $this->section('style'); ?><?php $this->stop(); ?>
+</head>
+
+<body>
+    <div class="page wec" id="page-<?php echo $this->route->getName(); ?>">
+        <div class="page-header-fixed container">
+            <div class="sidebar">
+                <div class="toggle-open"><i class="icon icon-main-menu"></i></div>
+                <a href="<?php echo $url; ?>" class="logo-top"></a>
+            </div>
+            <div class="main">
+                <div class="mt-hide inline">header</div>
+                <div class="person-operate">personal</div>
+            </div>
+        </div>
+        <div class="page-header"></div>
+
+        <div class="page-body container responsive">
+            <div class="sidebar">
+                <?php echo $this->insert('module/sidebar',[
+                    'menu' => $this->config->arr('menu'),
+                    'selectedMenu' => $this->selectedMenu
+                ]); ?>
+            </div>
+            <div class="main">
+                <?php $this->section('main'); ?><?php $this->stop(); ?>
+            </div>
+        </div><!-- .page-body -->
+
+        <div class="page-footer">page-footer</div>
+    </div>
+
+    <?php $this->section('script'); ?><?php $this->stop(); ?>
+    <?php $this->section('footer'); ?><?php $this->stop(); ?>
+
+    <script type="text/javascript">
+        window.PageConfig=<?php echo json_encode($pageConfig); ?>;
+    </script>
+    <script src="<?php echo $this->staticUrl("js/$source/main.js?v=" . $vcode); ?>"></script>
+
+    <?php $this->section('script'); ?><?php $this->stop(); ?>
+    <?php $this->section('footer'); ?><?php $this->stop(); ?>
+    
+</body>
+</html>
+
+
+

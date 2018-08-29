@@ -1,0 +1,20 @@
+#!/bin/bash
+
+filepath=`readlink -f "$0"`
+dirpath=`dirname "$filepath"`
+baseDir=`readlink -f "$dirpath/../"`
+
+set -ex
+cd $baseDir
+
+rm -rf $baseDir/site/static/css/dist
+rm -rf $baseDir/site/static/js/dist
+rm -rf $baseDir/cache/*
+rm -rf $baseDir/setting/setting.local.json
+
+#cd $baseDir
+#set -ex \
+#    && rm -rf $baseDir/site/doc/* \
+#    && rm -rf $baseDir/site/static/css/*  \
+#    && rm -rf $baseDir/site/static/js/* \
+#    && rm -rf $baseDir/cac

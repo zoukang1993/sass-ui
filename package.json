@@ -1,0 +1,30 @@
+{
+  "name": "wec-ui-web",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://project.tecposter.cn/diffusion/100/wec-ui-web.git",
+  "author": "zoukang <zoukang1993@163.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-jest": "^22.1.0",
+    "babel-preset-env": "^1.6.1",
+    "gap-node-front-builder": "^1.0.2",
+    "gap-node-front-server": "^1.0.2",
+    "regenerator-runtime": "^0.11.1"
+  },
+  "dependencies": {
+    "gap-front-base": "^1.0.1",
+    "gap-front-scss": "^1.0.11"
+  },
+  "scripts": {
+    "clear": "./bin/clear",
+    "jsonifySetting": "composer gap jsonifySetting",
+    "release": "npm run clear && npm run jsonifySetting && ./bin/gap-front-release",
+    "eslint": "eslint front/js/",
+    "sass-lint": "sass-lint -v --max-warnings=0",
+    "lint": "npm run eslint && npm run sass-lint",
+    "jest": "jest",
+    "test": "jest"
+  }
+}

@@ -1,0 +1,62 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'button',
+    'selectedMenu' => 'button',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <div class="list solid-divider">
+        <h1>button</h1>
+        <div class="flex flex-main item">
+            <div class="col-xs-4 col-md-4 col-lg-4 space">cancel</div>
+            <div class="col-xs-8 col-md-8 col-lg-8 space">
+                <div class="btn cancel">cancel</div>
+            </div>
+        </div>
+        <div class="flex flex-main item">
+            <div class="col-xs-12 col-md-4 col-lg-4 space">submit</div>
+            <div class="col-xs-12 col-md-8 col-lg-8 space">
+                <button class="btn submit m-b-xs">submit</button>
+                <a class="btn submit m-b-xs">submit</a>
+            </div>
+        </div>
+        <div class="flex flex-main item">
+            <div class="col-xs-12 col-md-12 col-lg-12 space m-b-xs">delete| active| frozen| update| more| generate</div>
+            <div class="col-xs-12 col-md-12 col-lg-12 space">
+                <div class="btn primary m-b-xs">primary</div>
+                <div class="btn delete m-b-xs">delete</div>
+                <div class="btn active m-b-xs">active</div>
+                <div class="btn frozen m-b-xs">frozen</div>
+                <div class="btn update m-b-xs">update</div>
+                <div class="btn more m-b-xs">more</div>
+                <div class="btn generate m-b-xs">generate</div>
+            </div>
+        </div>
+        <div class="flex flex-main item">
+            <div class="col-xs-4 col-md-4 col-lg-4 space">hollow</div>
+            <div class="col-xs-8 col-md-8 col-lg-8 space">
+                <div class="btn hollow">hollow</div>
+                <div class="btn hollow">+</div>
+                <div class="btn hollow">+ add</div>
+            </div>
+        </div>
+        <div class="item">
+            <div>expanded</div>
+            <div class="btn expanded">+ add</div>
+        </div>
+        <div class="flex flex-main item">
+            <div class="col-xs-12 col-md- col-lg-2 space">disabled</div>
+            <div class="col-xs-3 col-md- col-lg-3 space btn disabled">disabled</div>
+            <div class="col-xs-3 col-md- col-lg-3 space btn submit disabled">submit</div>
+            <div class="col-xs-3 col-md- col-lg-3 space btn delete disabled">delete</div>
+        </div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

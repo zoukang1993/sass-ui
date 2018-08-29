@@ -1,0 +1,17 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'box',
+    'selectedMenu' => 'box',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <h1>box</h1>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>
