@@ -1,0 +1,76 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'flex',
+    'selectedMenu' => 'flex',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <h1 class="text-left">flex</h1>
+    <h2 class="bg-gray m-t-md">
+        flex-main 
+        <code class="code">.flex .flex-main</code> > 
+        <code class="code">.co-xs-$i [.space]</code> + 
+        <code class="code">.col-md-$i [.space]</code> +
+        <code class="code">.col-lg-$i [.space]</code>
+    </h2>
+    <div class="flex flex-main m-b-xs">
+        <div class="col-lg-6 col-md-6 col-xs-12 space b-s-dark bg-title">col-lg-6 col-md-6 col-xs-12 space</div>
+        <div class="col-lg-6 col-md-6 col-xs-12 b-s-dark bg-title">col-lg-6 col-md-6 col-xs-12</div>
+    </div>
+    <div class="flex flex-main m-b-xs text-center">
+        <div class="col-lg-4 col-md-4 col-xs-12 b-s-dark">col-lg-4 col-md-4 col-xs-12</div>
+        <div class="col-lg-4 col-md-4 col-xs-12 b-s-dark bg-title">col-lg-4 col-md-4 col-xs-12</div>
+        <div class="col-lg-4 col-md-4 col-xs-12 b-s-dark">col-lg-4 col-md-4 col-xs-12</div>
+    </div>
+    <div class="flex flex-main m-b-xs">
+        <div class="col-lg-4 col-md-4 col-xs-12 b-s-dark bg-title">col-lg-4 col-md-4 col-xs-12</div>
+        <div class="col-lg-8 col-md-8 col-xs-12 b-s-dark">col-lg-8 col-md-8 col-xs-12</div>
+    </div>
+    <div class="flex flex-main m-b-xs">
+        <div class="col-lg-11 col-md-11 col-xs-12 b-s-dark bg-title">col-lg-11 col-md-11 col-xs-12</div>
+        <div class="col-lg-1 col-md-1 col-xs-12 b-s-dark">col-lg-1 col-md-1 col-xs-12</div>
+    </div>
+    <div class="flex flex-main m-b-xs">
+        <div class="col-lg-2 col-md-2 col-xs-2 b-s-dark bg-title">col-lg-2 col-md-2 col-xs-2</div>
+        <div class="col-lg-3 col-md-3 col-xs-3 b-s-dark">col-lg-3 col-md-3 col-xs-3</div>
+        <div class="col-lg-2 col-md-2 col-xs-2 b-s-dark bg-title">col-lg-2 col-md-2 col-xs-2</div>
+        <div class="col-lg-3 col-md-3 col-xs-3 b-s-dark">col-lg-3 col-md-3 col-xs-3</div>
+        <div class="col-lg-2 col-md-2 col-xs-2 b-s-dark bg-title">col-lg-2 col-md-2 col-xs-2</div>
+    </div>
+    <div class="flex flex-main m-b-xs space">
+        <b>text text text</b>
+        <div class="col-lg-10 col-md-9 col-xs-12 b-s-dark bg-title">base</div>
+    </div>
+    <div class="flex flex-start b-s-dark m-b-sm">flex-start <code class="code">.flex .flex-start</code></div>
+    <div class="flex flex-end b-s-dark m-b-sm">flex-end  <code class="code">.flex .flex-end</code></div>
+    <div class="flex flex-between b-s-dark">
+        <div>flex-between</div>
+        <code class="code">.flex .flex-between</code>
+        <div>flex-between</div>
+    </div>
+
+    <h2 class="bg-gray m-t-md" class="m-t-m">
+        flex-cross  
+        <code class="code">.flex .flex-center .align-center</code>
+    </h2>
+    <div class="flex flex-center align-center flex-cross-example b-s-dark">
+        <div>UI-WEC-FLEX</div>
+    </div>
+
+    <div class="ui-note">
+        注:
+        <div>- <code class="code">col-xs-$i</code>控制在手机端640px以下布局的列数;</div>
+        <div>- <code class="code">col-md-$i</code>控制在pc端640~960布局的列数;</div>
+        <div>- <code class="code">col-lg-$i</code>控制在pc端960以上布局的列数;</div>
+        <div>- 实际使用中所有的分辨率设备我们都分为十二列, 通过控制列数达到自适应的格局;</div>
+        <div>- flex 的水平布局可以和垂直分割均可配合使用,但是不建议嵌套过多使用.</div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

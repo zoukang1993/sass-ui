@@ -1,0 +1,39 @@
+#!/usr/bin/env node
+
+const path = require('path');
+const fs = require('fs');
+
+const currentDir = __dirname; // eslint-disable-line
+const baseDir = path.resolve(currentDir, '../');
+const setting = JSON.parse(fs.readFileSync(
+    path.resolve(baseDir, 'setting/setting.local.json'),
+    'utf8'
+));
+const staticHost = setting.site.static.host;
+
+require('gap-node-front-builder')({
+    baseDir: baseDir,
+    scss: {
+        includePaths: [
+            'node_modules/foundation-sites/scss',
+            'node_modules/gap-front-scss/scss'
+        ],
+        inputDir: 'front/scss',
+        outputDir: 'site/static/css/dist',
+        sourceMap: false,
+        outputStyle: 'compressed'
+    },
+    js: {
+        staticHost: staticHost,
+        publicPath: 'js/dist',
+        contextDir: 'front/js',
+        outputDir: 'site/static/js/dist',
+        minimize: true,
+        modules: [
+            'node_modules'
+        ],
+        entry: {
+            'main': './main.js'
+        },
+    }
+});

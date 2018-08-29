@@ -1,0 +1,73 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'grid',
+    'selectedMenu' => 'grid',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <h1>gird</h1>
+    <div class="grid space col-1-4 m-b-xs">
+        <div class="b-s-dark">1 space</div>
+        <div class="b-s-dark">4 space</div>
+    </div>
+
+    <div class="grid col-1-3 m-b-xs">
+        <div class="b-s-dark">col-1</div>
+        <div class="b-s-dark">col-3</div>
+    </div>
+
+    <div class="grid col-1 m-b-xs">
+        <div class="b-s-dark">col-1</div>
+    </div>
+
+    <div class="grid col-2 m-b-xs">
+        <div class="b-s-dark">col-2</div>
+        <div class="b-s-dark">col-2</div>
+    </div>
+
+    <div class="grid grid-center col-3 space m-b-xs">
+        <div class="b-s-dark">col-1</div>
+        <div class="b-s-dark">col-1</div>
+        <div class="b-s-dark">col-1</div>
+    </div>
+
+    <div class="grid col-1-1-1-1 space m-b-xs">
+        <div class="b-s-dark grid col-1-1-1-2 text-center">
+            <div class="b-s-tiny">1</div>
+            <div class="b-s-tiny">2</div>
+            <div class="b-s-tiny">3</div>
+            <div class="b-s-tiny bg-gray">4</div>
+        </div>
+        <div class="b-s-dark">col-5</div>
+        <div class="b-s-dark">col</div>
+        <div class="b-s-dark">col3</div>
+    </div>
+
+    <div class="grid col-1-1-1-1 space m-b-xs bg-light">
+        <div class="b-s-dark text-center">
+            <div class="b-s-tiny">1</div>
+            <div class="b-s-tiny">2</div>
+            <div class="b-s-tiny">3</div>
+            <div class="b-s-tiny bg-gray">4</div>
+        </div>
+        <div class="b-s-dark">col-5</div>
+        <div class="b-s-dark">col</div>
+        <div class="b-s-dark">col3</div>
+    </div>
+
+    <div class="ui-note">
+        注:
+        <div>- grid 和 flex 都可以实现页面的网格布局, 不建议使用grid做常规显示排版;</div>
+        <div>- grid 布局主要 用作页面排版, 我们定义将页面分隔为1, 2, 3, 4块排版,不建议过多</div>
+        <div>- grid 可以进行嵌套布局,不建议层级超过三层</div>
+        <div>- grid 浏览器兼容为良</div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

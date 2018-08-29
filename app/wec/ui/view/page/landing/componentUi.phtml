@@ -1,0 +1,179 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'component',
+    'selectedMenu' => 'component',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains mains-item">
+    <h1>component</h1>
+    <div>
+        <h2 class="bg-gray m-t-md">
+            breadcrumb 
+            <code class="code">.breadcrumb</code> > <code class="code">.bc-c</code> + 
+            <code class="code">bc-divider</code> + <code class="code">.bc-next</code> + <code class="code">.bc-lasted</code>
+        </h2>
+        <div>
+            <ui class="breadcrumb">
+                <li class="bc-c">
+                    <a href="###">homePage</a>
+                </li>
+                <li class="bc-divider"></li>
+                <li class="bc-first">
+                    <a href="###">order</a>
+                </li>
+                <li class="bc-divider"></li>
+                <li class="bc-next">
+                    <a href="###">salesOrder</a>
+                </li>
+                <li class="bc-divider"></li>
+                    <a href="###" class="bc-lasted">CS2018081800001</a>
+            </ui>
+        </div>
+
+        <h2 class="bg-gray m-t-md">
+            sub-menu 
+            <code class="code">.sub-menu</code> > <code class="code">[.active]</code>
+        </h2>
+        <div>
+            <ui class="sub-menu">
+                <li class="active">
+                    <a href="###">
+                        <i>i</i>
+                        我创建的
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <i>i</i>
+                        我关注的
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <i>i</i>
+                        我审核的
+                    </a>
+                </li>
+                <li>
+                    <a href="###">
+                        <i>i</i>
+                        全部
+                    </a>
+                </li>
+            </ui>
+        </div>
+
+        <h2 class="bg-gray m-t-md">
+            suspension-view 
+            <code class="code">.suspension</code> > <code class="code">.view</code> + <code class="code">.text</code>
+        </h2>
+        <div>
+            <ul class="flex flex-main">
+                <li class="col-xs-12 col-md-4 col-lg-4 suspension">
+                    <div class="view">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                    <div class="text">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                </li>
+                <li class="col-xs-12 col-md-4 col-lg-4 suspension">
+                    <div class="view">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                    <div class="text">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                </li>
+                <li class="col-xs-12 col-md-4 col-lg-4 ellipsis">文字修剪中,就不给看,你能怎么样, 谁让你屏幕那么窄,来打我啊!</li>
+            </ul>
+            <ul class="flex flex-main">
+                <li class="col-xs-12 col-md-4 col-lg-4 suspension">
+                    <div class="view">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                    <div class="text">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                </li>
+                <li class="col-xs-12 col-md-4 col-lg-4 suspension">
+                    <div class="view">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                    <div class="text">文字被修剪,因为长度溢出容器,你可以把鼠标移入查看全文,移出取消查看,文字长度没有溢出就不会修剪,不过依旧可以悬浮查看它</div>
+                </li>
+                <li class="col-xs-12 col-md-4 col-lg-4 ellipsis">文字修剪中,就不给看,你能怎么样, 谁让你屏幕那么窄,来打我啊!</li>
+            </ul>
+        </div>
+
+        <h2 class="bg-gray m-t-md">
+            suspension-message 
+            <code class="code">.suspension-message [.active]</code>
+        </h2>
+        <div>
+            <div>消息悬浮窗口, 右上角显示十秒.</div>
+            <div class="suspension-message active">消息弹框需要触发事件,消息内容需要自定义</div>
+        </div>
+
+        <h2 class="bg-gray m-t-md">
+            uploadFile
+            <code class="code"> .btn-upload</code> + <code class="code">.file-item</code> > 
+            <code class="code">img</code> + <code class="code">.btn-operate</code>
+        </h2>
+        <ul class="p-h-md">
+            <a href="###" class="btn-upload"></a>
+            <li class="file-item">
+                <img src="//crp-qiniu.ideapar.com/wecfin/Wecfin_logo_2x.png" alt="logo">
+                <div class="btn-operate">delete</div>
+            </li>
+            <li class="file-item">
+                <img src="//crp-qiniu.ideapar.com/wecfin/Wecfin_logo_2x.png" alt="logo">
+                <div class="btn-operate">delete</div>
+            </li>
+        </ul>
+
+        <h2 class="bg-gray m-t-md">
+            time-line 
+            <code class="code">.timeline</code> > 
+            <code class="code">.tl-item</code> > 
+            <code class="code">.tl-item-time</code> + <code class="code">.tl-item-icon</code> + <code class="code">.tl-item-content</code> >
+            <code class="code">.highlight</code>
+        </h2>
+        <div>
+            <ul class="timeline p-m">
+                <li class="tl-item">
+                    <div class="tl-item-time">
+                        <div>2018-3-12</div>
+                        <div>12:33:33</div>
+                    </div>
+                    <div class="tl-item-icon"></div>
+                    <div class="tl-item-content">
+                        <div class="highlight">you</div>
+                        created this order, and changed this status as
+                        <div class="highlight">reviewing</div>
+                    </div>
+                </li>
+                <li class="tl-item">
+                    <div class="tl-item-time">
+                        <div>2018-3-12</div>
+                        <div>12:33:33</div>
+                    </div>
+                    <div class="tl-item-icon"></div>
+                    <div class="tl-item-content">
+                        <div class="highlight">she</div>
+                        created this order, and changed this status as
+                        <div class="highlight">reviewing</div>
+                    </div>
+                </li>
+                <li class="tl-item">
+                    <div class="tl-item-time">
+                        <div>2018-3-12</div>
+                        <div>12:33:33</div>
+                    </div>
+                    <div class="tl-item-icon"></div>
+                    <div class="tl-item-content">
+                        <span class="highlight">she</span>
+                        created this order, and changed this status as
+                        <span class="highlight">resolve</span>
+                        <div class="highlight">good job!</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

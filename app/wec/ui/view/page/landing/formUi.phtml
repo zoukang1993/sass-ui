@@ -1,0 +1,199 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'form',
+    'selectedMenu' => 'form',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains" zload="formUi/view/form">
+    <h1>form</h1>
+
+    <div class="p-m">
+        <h2>input verify and warning</h2>
+        <form action="###" method="get">
+            <ul class="flex flex-main">
+                <li class="col-xs-12 col-md-6 col-lg-6 space">
+                    <input
+                        type="text"
+                        name="username"
+                        placeholder="username [a-zA-Z_] length 10"
+                        id="username" />
+                </li>
+
+                <li class="col-xs-12 col-md-6 col-lg-6 space">
+                    <input
+                        type="number"
+                        name="ages"
+                        placeholder="ages [0-150]"
+                        id="ages" />
+                </li>
+                <input class="btn primary" type="submit" id="submit-form" value="submit" />
+            </ul>
+        </form>
+    </div>
+
+    <form action="">
+        <div class="form-title">
+            <h2>form-title</h2>
+        </div>
+
+        <div class="form-content">
+            <h2 class="m-t-md">input</h2>
+            <ul class="flex flex-main">
+                <li class="col-xs-6 col-md-4 col-lg-4 space m-b-xs">
+                    <input
+                        type="text"
+                        name="username"
+                        class="invalid"
+                        placeholder="usernames"
+                        pattern="[a-z]{1,10}"
+                        id="username" />
+                </li>
+                <li class="col-xs-6 col-md-4 col-lg-4 space m-b-xs">
+                    <input type="number" class="invalid" min="0" step="1" max="99" />
+                </li>
+                <li class="col-xs-6 col-md-4 col-lg-4 space m-b-xs">
+                    <input type="date">
+                </li>
+                <li class="col-xs-6 col-md-4 col-lg-4 space m-b-xs">
+                    <input
+                        type="text"
+                        name="username"
+                        disabled="disabled"
+                        placeholder="disabled"
+                        pattern="[a-z]{1,10}"
+                        id="username" />
+                </li>
+                <li class="col-xs-6 col-md-4 col-lg-4 space m-b-xs">
+                    <input type="range" min="1" max="100" step="1" />
+                </li>
+                <li class="col-xs-6 col-md-4 col-lg-4 space m-b-xs">
+                    <input type="search" value="search" placeholder="search" />
+                </li>
+            </ul>
+
+            <h2>select</h2>
+            <ul class="flex flex-main">
+                <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs">
+                    <select>
+                        <option value="select">select</option>
+                        <option value="man">man</option>
+                        <option value="women"women>women</option>
+                    </select>
+                </li>
+                <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs">
+                    <select class="select">  
+                        <option>去掉select原有样式</option>  
+                        <option>Washington DC</option>  
+                        <option>Los Angeles</option>  
+                        <option>Chicago</option>  
+                        <option>Houston</option>  
+                        <option>Philadelphia</option>  
+                        <option>Phoenix</option>  
+                    </select>  
+                </li>
+                <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs">
+                    <label class="select">  
+                        <select class="select-inner">  
+                            <option>定义新样式</option>  
+                            <option>food beverage</option>  
+                            <option>restaurant</option>  
+                            <option>shopping</option>  
+                            <option>taxi limo</option>  
+                            <option>theatre</option>  
+                            <option>museum</option>  
+                            <option>computers</option>  
+                        </select>  
+                    </label>
+                </li>
+            </ul>
+
+            <h2>select</h2>
+            <span class="required-field">search-area</span>
+            <div class="input-group">
+                <input type="text" class="input-group-field" required />
+                <div class="input-group-button">
+                    <button class="btn hollow"><i class="icon icon-search"></i></button>
+                </div>
+            </div>
+            
+            <h2>textarea</h2>
+            <div>
+                <textarea name="desc" id="" cols="30" rows="5" placeholder="textarea"></textarea>
+            </div>
+
+            <h2 class="m-t-m">chebox | radio</h2>
+            <div class="flex flex-main">
+                <div class="col-xs-12 col-md-8 col-lg-8 space m-b-xs">
+                    <span>checkbox :</span>
+                    <label class="choose-area">
+                        <span class="choose-area-name">前端工程师</span>
+                        <input type="checkbox" name="radioName" id="radioName1" hidden/>
+                        <label for="radioName1" class="choose-area-beauty"></label>
+                    </label>
+                    <label class="choose-area">
+                        <span class="choose-area-name">后端工程师</span>
+                        <input type="checkbox" name="radioName" id="radioName2" hidden/>
+                        <label for="radioName2" class="choose-area-beauty"></label>
+                    </label>
+                    <label class="choose-area">
+                        <span class="choose-area-name">全栈工程师</span>
+                        <input type="checkbox" name="radioName" id="radioName3" checked hidden/>
+                        <label for="radioName3" class="choose-area-beauty"></label>
+                    </label>
+                </div>
+
+                <div class="col-xs-12 col-md-4 col-lg-4 space m-b-xs">
+                    <span>radio :</span>
+                    <label class="choose-area">
+                        <span class="choose-area-name">phone</span>
+                        <input type="radio" name="register" id="phone1" checked hidden value="phone"/>
+                        <label for="phone1" class="choose-area-beauty"></label>
+                    </label>
+                    <label class="choose-area">
+                        <span class="choose-area-name">email</span>
+                        <input type="radio" name="register" id="email2" hidden value="emai"/>
+                        <label for="email2" class="choose-area-beauty"></label>
+                    </label>
+                </div>
+            </div>
+
+            <h2 class="m-t-m">switch</h2>
+            <div class="switch">  
+                <input class="switch-checkbox" id="onoffswitch" type="checkbox">  
+                <label class="switch-label" for="onoffswitch">  
+                    <span class="switch-inner" data-on="ON" data-off="OFF"></span>  
+                    <span class="switch-switch"></span>  
+                </label>  
+            </div>
+        </div>
+
+        <div class="form-footer flex flex-end">
+            <button class="btn cancel">cancel</button>
+            <div class="btn submit">submit</div>
+        </div>
+
+    </form>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<div class="gap-mask-outer hide">
+    <div class="gap-mask">
+        <div class="submit-pop pop responsive">
+            <form class="submit-form p-lg">
+                <h2>form</h2>
+                <div>
+                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Quam quos numquam a quis placeat obcaecati, voluptatibus autem officiis ad laboriosam praesentium amet sunt, similique libero deleniti laborum facere? Vero, tempore?
+                </div>
+                <div class="text-center">
+                    <button class="btn canceled">cancel</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<?php $this->replace(); ?>

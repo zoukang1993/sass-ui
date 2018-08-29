@@ -1,0 +1,30 @@
+<?php
+$isFetch = $this->isFetch;
+if ($isFetch === 1) {
+    $fetchPageMenu = $this->menu["$this->selectedMenu"]["fetchMenu"];
+}
+?>
+<div class="hide-sidebar-scroll">
+    <?php if ($isFetch) { ?>
+    <ul class="title-list-fetch">
+        <?php foreach ($fetchPageMenu as $item) { ?>
+        <li class="title-item">
+            <a href="<?php echo $this->routeUrl($item['route']); ?>">
+                <?php echo $item['title']; ?>
+            </a>
+        </li>
+        <?php } ?>
+    </ul>
+    <?php } elseif (!$isFetch) { ?>
+    <ul class="title-lists">
+        <?php foreach ($this->menu as $key => $item) { ?>
+        <?php $class = ($key == $this->selectedMenu) ? strtoupper($key) . ' active' : strtoupper($key); ?>
+        <li class="title-item <?php echo $class; ?>">
+            <a href="<?php echo $this->routeUrl($item['route']); ?>">
+                <?php echo $item['title']; ?>
+            </a>
+        </li>
+        <?php } ?>
+    </ul>
+    <?php } ?>
+</div>

@@ -1,0 +1,36 @@
+<?php
+$vcode = $this->config->get('vcode');
+$localeKey = $this->getLocaleKey();
+
+$pageConfig = $this->pageConfig ? $this->pageConfig : [];
+$pageConfig = array_merge($pageConfig, [
+    'localeKey' => $localeKey,
+    'now' => micro_date()
+]);
+$source = $this->config->get('debug') ? 'dev' : 'dist';
+?><!DOCTYPE html>
+<html lang="<?php echo $localeKey; ?>" prefix="og: http://ogp.me/ns#">
+<head>
+<?php echo $this->insert('html/meta', ['localeKey', $localeKey]); ?>
+<link rel="stylesheet" href="<?php echo $this->staticUrl("css/{$source}/wec-ui-web.css?v=" . $vcode); ?>">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.2/animate.min.css">
+<?php $this->section('style'); ?><?php $this->stop(); ?>
+</head>
+
+<body>
+    <div class="page" id="page-<?php echo $this->route->getName(); ?>">
+        <?php $this->section('main'); ?><?php $this->stop(); ?> 
+        <div class="page-footer">Copyright©2015 ui-wec</div>
+    </div>
+
+    <?php $this->section('script'); ?><?php $this->stop(); ?>
+    <?php $this->section('footer'); ?><?php $this->stop(); ?>
+
+    <script type="text/javascript">
+        window.PageConfig=<?php echo json_encode($pageConfig); ?>;
+    </script>
+    <script src="<?php echo $this->staticUrl("js/$source/main.js?v=" . $vcode); ?>"></script>
+
+    <?php $this->section('script'); ?><?php $this->stop(); ?>
+</body>
+</html>

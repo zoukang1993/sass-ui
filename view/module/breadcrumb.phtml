@@ -1,0 +1,30 @@
+<?php
+// $crumbItems = $this->crumbItems;
+$crumbItems = [
+    [
+        'name' => 'first',
+        'url' => '###'
+    ],
+    [
+        'name' => 'lasted',
+        'url' => '###'
+    ]
+
+];
+$itemCount = count($crumbItems);
+$itemIndex = 0;
+?>
+<span class="breadcrumb">
+    <?php foreach($crumbItems as $item) { ?>
+        <?php
+            $last = ($itemIndex == $itemCount-1) ? '-lasted' : '';
+            $itemIndex++;
+        ?>
+        <a href="<?php echo $item['url']; ?>" class="<?php echo 'bc'.$last; ?>">
+            <?php echo $item['name']; ?>
+        </a>
+        <?php if (!$last) { ?>
+            <span class="bc-divider"></span>
+        <?php }?>
+    <?php } ?>
+</span>

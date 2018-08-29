@@ -1,0 +1,47 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'card',
+    'selectedMenu' => 'card',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <h1>card</h1>
+
+    <h2 class="bg-gray m-t-md">card, list</h2>
+    <div class="card list">
+        <ul class="card-title title flex flex-main">
+            <li class="col-xs-6 col-md-2 col-lg-2 space">title-1</li>
+            <li class="col-xs-6 col-md-2 col-lg-2 space">title-2</li>
+            <li class="col-xs-6 col-md-2 col-lg-2 space">title-3</li>
+            <li class="col-xs-6 col-md-2 col-lg-2 space">title-2</li>
+            <li class="col-xs-6 col-md-2 col-lg-2 space">title-3</li>
+            <li class="col-xs-6 col-md-2 col-lg-2 space">title-2</li>
+        </ul>
+        <div class="item">sssss</div>
+        <div class="item">sssssss</div>
+    </div>
+    
+    <h2 class="bg-gray m-t-md">card, col</h2>
+    <ul class="card flex flex-main text-center p-m">
+        <li class="card col-xs-6 col-md-4 col-lg-4 space p-m">card</li>
+        <li class="card col-xs-6 col-md-4 col-lg-4 space p-m">card</li>
+        <li class="card col-xs-6 col-md-4 col-lg-4 space p-m">card</li>
+        <li class="card col-xs-6 col-md-4 col-lg-4 space p-m">card</li>
+        <li class="card col-xs-6 col-md-4 col-lg-4 space p-m">card</li>
+        <li class="card col-xs-6 col-md-4 col-lg-4 space p-m">card</li>
+    </ul>
+
+    <div class="ui-note">
+        注:
+        <div>- card在PC端分12列显示, 在移动端列数保持在4以下, 可自由处理;</div>
+        <div>- card 配合flex等可实现页面的设备响应式布局;</div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

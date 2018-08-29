@@ -1,0 +1,45 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'logo',
+    'selectedMenu' => 'logo',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <h1>LOGO标准  logo</h1>
+    <div class="logo-list">
+        <div class="flex flex-main space">
+            <div class="col-xs-12 col-md-6 col-lg-4 m-b-xs space logo-item b-d-light">
+                <div class="logo-img logo1"></div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 m-b-xs space logo-list b-d-light">
+                <div class="logo-img logo2"></div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 m-b-xs space logo-list b-d-light">
+                <div class="logo-img logo3"></div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 m-b-xs space logo-item primary-bg">
+                <div class="logo-img logo4"></div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 m-b-xs space logo-list primary-bg">
+                <div class="logo-img logo5"></div>
+            </div>
+            <div class="col-xs-12 col-md-6 col-lg-4 m-b-xs space logo-list primary-bg">
+                <div class="logo-img logo6"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="grayer-color ui-note">
+        标志使用场景
+        <div>—— 根据使用标志不允许使用其他颜色版本, 不可拆分.</div>
+        <div>—— 标志需要与背景色保持高度对比, 以保证标志的可视性与认知度.</div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>

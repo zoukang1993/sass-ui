@@ -1,0 +1,128 @@
+<?php
+$this->layout('layout/layout', [
+    'menu' => 'border',
+    'selectedMenu' => 'border',
+    'isFetch' => 0
+]);
+?>
+
+<?php $this->section('main'); ?>
+<div class="mains">
+    <h1>BORDER</h1>
+    <h2 class="bg-gray m-t-md">border-all</h2>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark"><code class="code">.b-s-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-light"><code class="code">.b-s-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-tiny"><code class="code">.b-s-tiny</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-d-dark"><code class="code">.b-d-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-d-light"><code class="code">.b-d-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-d-tiny"><code class="code">.b-d-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-dot-dark"><code class="code">.b-dot-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-dot-light"><code class="code">.b-dot-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-dot-tiny"><code class="code">.b-dot-tiny</code></li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">border-top</h2>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-s-dark"><code class="code">.b-t-s-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-s-light"><code class="code">.b-t-s-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-s-tiny"><code class="code">.b-t-s-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-d-dark"><code class="code">.b-t-d-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-d-light"><code class="code">.b-t-d-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-d-tiny"><code class="code">.b-t-d-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-dot-dark"><code class="code">.b-t-dot-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-dot-light"><code class="code">.b-t-dot-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-t-dot-tiny"><code class="code">.b-t-dot-tiny</code></li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">border-right</h2>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-s-dark"><code class="code">.b-r-s-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-s-light"><code class="code">.b-r-s-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-s-tiny"><code class="code">.b-r-s-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-d-dark"><code class="code">.b-r-d-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-d-light"><code class="code">.b-r-d-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-d-tiny"><code class="code">.b-r-d-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-dot-dark"><code class="code">.b-r-dot-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-dot-light"><code class="code">.b-r-dot-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-r-dot-tiny"><code class="code">.b-r-dot-tiny</code></li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">border-bottom</h2>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-s-dark"><code class="code">.b-b-s-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-s-light"><code class="code">.b-b-s-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-s-tiny"><code class="code">.b-b-s-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-d-dark"><code class="code">.b-b-d-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-d-light"><code class="code">.b-b-d-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-d-tiny"><code class="code">.b-b-d-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-dot-dark"><code class="code">.b-b-dot-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-dot-light"><code class="code">.b-b-dot-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-b-dot-tiny"><code class="code">.b-b-dot-tiny</code></li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">border-left</h2>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-s-dark"><code class="code">.b-l-s-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-s-light"><code class="code">.b-l-s-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-s-tiny"><code class="code">.b-l-s-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-d-dark"><code class="code">.b-l-d-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-d-light"><code class="code">.b-l-d-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-d-tiny"><code class="code">.b-l-d-tiny</code></li>
+    </ul>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-dot-dark"><code class="code">.b-l-dot-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-dot-light"><code class="code">.b-l-dot-light</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-l-dot-tiny"><code class="code">.b-l-dot-tiny</code></li>
+    </ul>
+    
+    <h2 class="bg-gray m-t-md">border-radius</h2>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark b-radius-2"><code class="code">.b-radius-2</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark b-radius-3"><code class="code">.b-radius-3</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark b-radius-6"><code class="code">.b-radius-6</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark b-radius-8"><code class="code">.b-radius-8</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark b-radius-10"><code class="code">.b-radius-10</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark b-radius-12"><code class="code">.b-radius-12</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark n-b-radius"><code class="code">.n-b-radius</code></li>
+    </ul>
+
+    <h2 class="bg-gray m-t-md">no-border-$direction</h2>
+    <ul class="flex flex-main text-center">
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark"><code class="code">.b-s-dark</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark no-border"><code class="code">.n-border</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark n-b-t"><code class="code">.n-b-t</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark n-b-r"><code class="code">.n-b-r</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark n-b-b"><code class="code">.n-b-b</code></li>
+        <li class="col-xs-4 col-md-4 col-lg-4 space m-b-xs b-s-dark n-b-l"><code class="code">.n-b-l</code></li>
+    </ul>
+
+    <div class="ui-note">
+        注:
+        <div>border-width 的值暂定为1px;</div>
+        <div>border-type 主要使用solid/dashed/dotted 3种, double不建议使用;</div>
+        <div>border-color 暂定颜色三种, 命名为dark/light/tiny, 实际以项目为主;</div>
+        <div>border-radius 值在UI中为0,  2至12px</div>
+    </div>
+</div>
+
+<?php $this->replace(); ?>
+
+<?php $this->section('footer'); ?>
+<?php $this->replace(); ?>
