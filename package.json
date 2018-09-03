@@ -6,16 +6,16 @@
   "author": "zoukang <zoukang1993@163.com>",
   "license": "MIT",
   "devDependencies": {
-    "babel-core": "^6.26.0",
-    "babel-jest": "^22.1.0",
-    "babel-preset-env": "^1.6.1",
+    "babel-core": "^6.26.3",
+    "babel-jest": "^22.4.4",
+    "babel-preset-env": "^1.7.0",
     "gap-node-front-builder": "^1.0.2",
-    "gap-node-front-server": "^1.0.2",
+    "gap-node-front-server": "^1.0.3",
     "regenerator-runtime": "^0.11.1"
   },
   "dependencies": {
-    "gap-front-base": "^1.0.1",
-    "gap-front-scss": "^1.0.11"
+    "gap-front-base": "^1.0.5",
+    "gap-front-scss": "^1.0.12"
   },
   "scripts": {
     "clear": "./bin/clear",
